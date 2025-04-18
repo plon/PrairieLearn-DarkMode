@@ -5,15 +5,16 @@
 // @description  Dark mode for PrairieLearn
 // @author       plon
 // @match        https://us.prairielearn.com/*
+// @exclude      https://us.prairielearn.com/pl/workspace/*
 // @grant        none
 // @license      MIT
 // @run-at       document-start
 // ==/UserScript==
 
 (function () {
-  "use strict";
+    "use strict";
 
-  const darkModeStyles = `
+    const darkModeStyles = `
         :root {
             --pl-dark-bg-primary: #1a1a1a;
             --pl-dark-bg-secondary: #222222;
@@ -204,8 +205,8 @@
 
     `;
 
-  const styleElement = document.createElement("style");
-  styleElement.id = "prairielearn-dark-mode-style";
-  styleElement.textContent = darkModeStyles;
-  document.head.appendChild(styleElement);
+    const styleElement = document.createElement("style");
+    styleElement.id = "prairielearn-dark-mode-style";
+    styleElement.textContent = darkModeStyles;
+    document.head.appendChild(styleElement);
 })();
